@@ -1,0 +1,108 @@
+{
+  "version": 1,
+  "series": [
+    {
+      "id": "3182",
+      "name": "Springer Series in Operations Research and Financial Engineering"
+    },
+    {
+      "id": "7438",
+      "name": "Springer Undergraduate Texts in Mathematics and Technology"
+    },
+    {
+      "id": "4842",
+      "name": "Birkhäuser Advanced Texts / Basler Lehrbücher"
+    },
+    {
+      "id": "13205",
+      "name": "Probability Theory and Stochastic Modelling"
+    },
+    {
+      "id": "15875",
+      "name": "Moscow Lectures"
+    },
+    {
+      "id": "5350",
+      "name": "Monografie Matematyczne"
+    },
+    {
+      "id": "714",
+      "name": "Problem Books in Mathematics"
+    }
+  ],
+  "books": {
+    "10.1007/978-3-642-56468-0": {
+      "id": "10.1007/978-3-642-56468-0",
+      "url": "https://link.springer.com/book/10.1007/978-3-642-56468-0",
+      "title": "Fundamentals of Convex Analysis",
+      "seriesIds": [],
+      "checkedAt": "2026-11-14T11:00:00.000Z",
+      "offers": [
+        {
+          "format": "Softcover",
+          "status": "discounted",
+          "tax": "Price includes VAT (France)",
+          "isbn": "9783540422051",
+          "current": 1771,
+          "currency": "EUR",
+          "original": 7384,
+          "evidence": "EUR 17.71 / prix barré EUR 73.84"
+        },
+        {
+          "format": "Hardcover",
+          "status": "unknown",
+          "tax": "Pays / TVA non précisés",
+          "reason": "Format non exposé dans les options reçues"
+        },
+        {
+          "format": "eBook",
+          "status": "discounted",
+          "tax": "Price includes VAT (France)",
+          "isbn": "9783642564680",
+          "current": 1799,
+          "currency": "EUR",
+          "original": 5349,
+          "evidence": "EUR 17.99 / prix barré EUR 53.49"
+        }
+      ]
+    },
+    "10.1007/978-3-319-11080-6": {
+      "id": "10.1007/978-3-319-11080-6",
+      "url": "https://link.springer.com/book/10.1007/978-3-319-11080-6",
+      "title": "Linear Algebra Done Right",
+      "seriesIds": [],
+      "checkedAt": "2026-11-14T11:00:00.000Z",
+      "offers": [
+        {
+          "format": "Softcover",
+          "status": "unknown",
+          "tax": "Pays / TVA non précisés",
+          "reason": "Format non exposé dans les options reçues"
+        },
+        {
+          "format": "Hardcover",
+          "status": "unknown",
+          "tax": "Pays / TVA non précisés",
+          "reason": "Format non exposé dans les options reçues"
+        },
+        {
+          "format": "eBook",
+          "status": "discounted",
+          "tax": "Price includes VAT (France)",
+          "isbn": "9783319110806",
+          "current": 1799,
+          "currency": "EUR",
+          "original": 3209,
+          "evidence": "EUR 17.99 / prix barré EUR 32.09"
+        }
+      ]
+    }
+  },
+  "jobs": [],
+  "history": [],
+  "discoveredUrls": [
+    "https://link.springer.com/book/10.1007/978-3-642-56468-0",
+    "https://link.springer.com/book/10.1007/978-3-319-11080-6"
+  ],
+  "collectionEnabled": false
+}

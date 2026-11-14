@@ -1,0 +1,15 @@
+services:
+  api:
+    build: .
+    init: true
+    restart: unless-stopped
+    stop_grace_period: 90s
+    ports: ["127.0.0.1:8787:8787"]
+    environment:
+      ADMIN_TOKEN: ${ADMIN_TOKEN:?Définir ADMIN_TOKEN}
+      FRONTEND_ORIGIN: ${FRONTEND_ORIGIN:?Définir FRONTEND_ORIGIN}
+      SPRINGER_COLLECTION_ENABLED: ${SPRINGER_COLLECTION_ENABLED:-false}
+      COLLECTOR_USER_AGENT: ${COLLECTOR_USER_AGENT:-SpringerDiscountFinder/0.1}
+    volumes: ["springer-data:/data"]
+volumes:
+  springer-data:

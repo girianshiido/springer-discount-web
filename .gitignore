@@ -1,0 +1,7 @@
+node_modules/
+dist/
+data/
+.env
+*.log
+public/snapshot.json
+public/catalogue.html
