@@ -45,8 +45,8 @@ Le PDF téléchargé dans le navigateur a été relu : il contient le lien corre
 ## Ce qui n’a pas été testé
 
 - Aucun déploiement sur GitHub Pages, hébergement externe ou runner GitHub Actions n’a été effectué ; les workflows et conteneurs sont fournis pour déploiement, pas présentés comme exécutés.
-- Aucun crawl intégral des sept séries ; ni exhaustivité des promotions ni stabilité future de la structure Springer ne sont garanties.
-- Le script fixed9 et son ancien état ne sont pas accessibles : aucune affirmation de migration complète des séries, de reprise ou d’historique Python.
+- Aucun crawl intégral des 30 séries ; ni exhaustivité des promotions ni stabilité future de la structure Springer ne sont garanties.
+- Le fichier fixed9 a été fourni après la première livraison : les 30 associations nom/URL de `SERIES` ont été extraites sans exécuter le script et comparées au catalogue TypeScript. À la demande de l’utilisateur, ce fichier sert uniquement de source pour les URL ; aucune reproduction ni migration du fonctionnement Python n’est recherchée.
 - Pas de validation du collecteur sur une IP d’hébergement choisie par l’utilisateur. Les prix depuis une IP française locale ne prouvent pas les prix depuis un datacenter étranger.
 - Les exécutables de test Chromium, Firefox et WebKit proposés par Playwright ne sont pas installés. Le navigateur intégré a servi pour l’essai réel de l’interface. Pas d’essai physique Android/iPhone et pas de certification Chrome/Edge/Firefox/Safari. L’usage d’API web standard et la mise en page adaptative sont une base de compatibilité ; une recette dans les navigateurs cibles reste nécessaire.
 - Pas de test de charge, de concurrence multi-instance ou de conformité d’accessibilité exhaustive. L’application est conçue pour un opérateur, une API, un volume persistant.

@@ -2,16 +2,108 @@
   "version": 1,
   "series": [
     {
+      "id": "136",
+      "name": "Graduate Texts in Mathematics (GTM)"
+    },
+    {
+      "id": "666",
+      "name": "Undergraduate Texts in Mathematics (UTM)"
+    },
+    {
+      "id": "223",
+      "name": "Universitext"
+    },
+    {
+      "id": "304",
+      "name": "Lecture Notes in Mathematics (LNM)"
+    },
+    {
+      "id": "3733",
+      "name": "Springer Monographs in Mathematics"
+    },
+    {
+      "id": "728",
+      "name": "Ergebnisse der Mathematik und ihrer Grenzgebiete. 3. Folge"
+    },
+    {
+      "id": "3242",
+      "name": "Classics in Mathematics"
+    },
+    {
+      "id": "3423",
+      "name": "Springer Undergraduate Mathematics Series (SUMS)"
+    },
+    {
+      "id": "7161",
+      "name": "Cornerstones"
+    },
+    {
+      "id": "15141",
+      "name": "Texts and Readings in Mathematics"
+    },
+    {
+      "id": "16860",
+      "name": "KIAS Springer Series in Mathematics"
+    },
+    {
+      "id": "3080",
+      "name": "Universitext: Tracts in Mathematics"
+    },
+    {
+      "id": "10502",
+      "name": "Canada — Fields Institute Monographs"
+    },
+    {
+      "id": "10503",
+      "name": "Canada — Fields Institute Communications"
+    },
+    {
+      "id": "4318",
+      "name": "Canada — CMS Books in Mathematics"
+    },
+    {
+      "id": "16627",
+      "name": "Canada — CMS/CAIMS Books in Mathematics"
+    },
+    {
+      "id": "3872",
+      "name": "Canada — CRM Series in Mathematical Physics"
+    },
+    {
+      "id": "15360",
+      "name": "Canada — CRM Short Courses"
+    },
+    {
+      "id": "4848",
+      "name": "Birkhäuser — Progress in Mathematics"
+    },
+    {
+      "id": "4961",
+      "name": "Birkhäuser — Trends in Mathematics"
+    },
+    {
+      "id": "1210",
+      "name": "Birkhäuser — Operator Theory: Advances and Applications"
+    },
+    {
+      "id": "1504",
+      "name": "Birkhäuser — Birkhäuser Advanced Texts"
+    },
+    {
+      "id": "5768",
+      "name": "Birkhäuser — Modern Birkhäuser Classics"
+    },
+    {
       "id": "3182",
       "name": "Springer Series in Operations Research and Financial Engineering"
     },
     {
       "id": "7438",
-      "name": "Springer Undergraduate Texts in Mathematics and Technology"
+      "name": "Springer Undergraduate Texts in Mathematics and Technology (SUMAT)"
     },
     {
       "id": "4842",
-      "name": "Birkhäuser Advanced Texts / Basler Lehrbücher"
+      "name": "Birkhäuser — Birkhäuser Advanced Texts / Basler Lehrbücher"
     },
     {
       "id": "13205",

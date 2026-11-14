@@ -14,13 +14,13 @@ Application TypeScript préparée pour GitHub Pages + une API Node persistante. 
 - PDF paginé avec liens cliquables : **URL des résultats** respecte les filtres ; **toutes les URL découvertes** inclut aussi les livres non encore vérifiés / hors critères, avec dédoublonnage des URL exactes.
 - Sauvegarde JSON des relevés et ouverture locale. Une sauvegarde des relevés n’inclut pas la file de reprise privée ; sauvegarder `data/state.json` pour une restauration du collecteur.
 
-## Limite importante : sources précédentes
+## Séries du projet initial
 
-L’ancien échange a été consulté. Il cite `springer_discount_finder_series_only_fixed9.py`, mais la pièce jointe n’était pas récupérable depuis la conversation et aucun exemplaire n’a été trouvé dans les sources accessibles. **Ce projet est une réimplémentation, pas une conversion vérifiée du script.**
+Les **30 séries** de `springer_discount_finder_series_only_fixed9.py`, fourni le 14 novembre 2026, ont été reprises dans `config/series.json`, avec leurs noms et leurs identifiants d’origine. La liste a été comparée à la constante `SERIES` du fichier fourni, sans exécuter ce programme.
 
-Sept séries explicitement présentes dans les derniers échanges ont été reprises dans `config/series.json` : 3182, 7438, 4842, 13205, 15875, 5350 et 714. La liste complète de fixed9, le format de son ancien historique et ses règles exactes de reprise restent à comparer au fichier original. Il n’est donc pas possible de garantir leur compatibilité. Aucun historique existant n’a été écrasé.
+Conformément à la demande, le fichier Python sert uniquement de référence pour les URL des séries. L’application TypeScript conserve son propre fonctionnement ; elle ne reproduit pas le stockage SQLite ni la reprise de l’ancien programme. Les anciens fichiers de données Python ne sont pas importés automatiquement.
 
-Lorsque le script est disponible : `npm run migrate:series -- /chemin/vers/fixed9.py` extrait les associations nom/URL qu’il reconnaît vers **un nouveau** fichier JSON, sans exécuter le Python. Vérifier que le nombre et les noms correspondent au script, puis charger la liste dans « Connexion et données ». Si la structure diffère, l’extracteur s’arrête sans écrasement ; une migration adaptée sera nécessaire.
+Pour d’autres listes nom/URL écrites dans une source Python : `npm run migrate:series -- /chemin/vers/source.py` peut extraire les associations reconnues vers un nouveau fichier JSON, sans exécuter le Python. Vérifier la liste, puis la charger dans « Connexion et données ».
 
 ## Architecture conseillée
 
