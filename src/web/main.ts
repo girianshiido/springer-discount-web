@@ -1,9 +1,10 @@
 import { FORMATS, DEFAULT_FILTERS, CATALOGUE_CSS, escapeHtml as e, results, groups, resultCard, richCatalogue, type Filters, type Series, type Snapshot, type ViewOptions, type Book } from '../shared/model.js';
 import { createUrlPdf } from '../shared/pdf.js';
+import initialSeries from '../../config/series.json';
 import './catalogue.css';
 import './style.css';
 const root=document.querySelector<HTMLDivElement>('#app')!;
-let snapshot: Snapshot | undefined;
+let snapshot: Snapshot | undefined = { version:1, series:initialSeries, books:{}, jobs:[], history:[], collectionEnabled:false, discoveredUrls:[] };
 let books: Book[]=[];
 let filters:Filters=structuredClone(DEFAULT_FILTERS);
 let view:ViewOptions={group:true,sort:'title'};
@@ -58,9 +59,10 @@ function validateSnapshot(data:unknown): asserts data is Snapshot {
 function renderProgress() {
   const j=snapshot?.jobs.at(-1); const labels={running:'En cours',paused:'En pause',blocked:'À vérifier',completed:'Terminée'};
   el('job-badge').textContent=j?labels[j.status]:'Au repos';
-  el('progress-text').textContent=j?`${j.message} · ${j.processed} pages traitées · ${j.discovered} livres découverts · ${j.errors} tâches ignorées`:'Aucune recherche en cours.';
+  el('progress-text').textContent=j?`${j.message} · ${j.processed} pages traitées · ${j.discovered} livres découverts · ${j.errors} tâches ignorées`:(mode==='none'?'Interface prête. Connectez le collecteur pour lancer une recherche, ou ouvrez un relevé JSON existant.':'Aucune recherche en cours.');
   el('job-actions').innerHTML=mode==='api'&&j ? (j.status==='running'?'<button data-action="pause">Arrêter après la page en cours</button>':['paused','blocked'].includes(j.status)?`<button data-action="resume">Reprendre</button>${j.status==='blocked'?'<button data-action="skip">Ignorer la page bloquée</button>':''}`:''):'';
   document.querySelectorAll<HTMLButtonElement>('[data-action]').forEach(n=>n.onclick=()=>command(`/api/jobs/${j!.id}/${n.dataset.action}`,{}));
+  el<HTMLButtonElement>('save-series').disabled=mode!=='api';
   el<HTMLButtonElement>('start').disabled=mode!=='api'||!snapshot?.collectionEnabled||busy||j?.status==='running';
 }
 async function refresh(initial=false) {
@@ -95,7 +97,9 @@ el('export-separate').onclick=()=>{
 };
 el('save-json').onclick=()=>{if(snapshot)download('springer-releves.json',JSON.stringify(snapshot,null,2),'application/json');};
 el<HTMLInputElement>('import').onchange=async ev=>{try{const f=(ev.target as HTMLInputElement).files?.[0];if(!f)return;if(f.size>30_000_000)throw new Error('Fichier trop volumineux');const data=JSON.parse(await f.text());validateSnapshot(data);snapshot=data;mode='file';books=Object.values(data.books);selectedSeries=data.series.map(s=>s.id);renderSeries();readFilters();renderResults();renderProgress();el('connection').textContent='Relevé local · hors ligne';message('Relevé ouvert localement. Reconnectez l’API pour lancer une collecte.');}catch(err){message((err as Error).message,true);}};
-renderResults();renderProgress();if(api)void refresh(true);
+selectedSeries=initialSeries.filter(s=>!filters.seriesIds.length||filters.seriesIds.includes('*')||filters.seriesIds.includes(s.id)).map(s=>s.id);
+renderSeries();readFilters();renderResults();renderProgress();
+if(api)void refresh(true);else el('connection').textContent='Interface en ligne · collecteur à connecter';
 setInterval(()=>void refresh(),5000);
 
 function exportPdf(all:boolean) {

@@ -1,6 +1,6 @@
 # Les belles trouvailles — livres Springer remisés
 
-Application TypeScript préparée pour GitHub Pages + une API Node persistante. Dépôt : [girianshiido/springer-discount-web](https://github.com/girianshiido/springer-discount-web). La mise en ligne de l’interface et l’hébergement de l’API restent à configurer. Elle ne dépend pas de Python sur le poste du visiteur.
+Application TypeScript préparée pour GitHub Pages + une API Node persistante. Dépôt : [girianshiido/springer-discount-web](https://github.com/girianshiido/springer-discount-web). L’interface est publiée sur [GitHub Pages](https://girianshiido.github.io/springer-discount-web/). L’hébergement et la connexion de l’API de collecte restent à configurer. Les 30 séries sont visibles même sans API ; la consultation de relevés et les exports fonctionnent après ouverture d’un relevé JSON. Elle ne dépend pas de Python sur le poste du visiteur.
 
 ## Ce qui est disponible
 
